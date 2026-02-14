@@ -1541,63 +1541,86 @@ body.dark-mode .hero-overlay {
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 2.5rem;
+    /* Container geral */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Navegação Mobile */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .relationship-timer {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
     }
     
     .nav-menu {
-        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+    
+    .nav-menu li {
+        flex: 0 0 auto;
+    }
+    
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        display: inline-block;
+    }
+    
+    .nav-link i {
+        margin-right: 0.2rem;
         font-size: 0.9rem;
     }
     
-    .story-card {
-        max-width: 100%;
-        padding: 1.5rem;
+    .dark-mode-toggle {
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
     }
     
-    .story-content {
-        min-height: 500px;
+    /* Hero Section Mobile */
+    .hero {
+        min-height: 70vh;
+        padding: 1rem;
+        background-attachment: scroll;
     }
     
-    /* Ajustar posição dos segredos em mobile */
-    .secret-music {
-        top: 20px;
-        left: 20px;
+    .main-title {
+        font-size: 2rem;
     }
     
-    .secret-photo {
-        bottom: 30px;
-        right: 20px;
+    .subtitle {
+        font-size: 1.1rem;
     }
     
-    .music-btn {
-        top: 20px;
-        left: 20px;
-        padding: 0.7rem 1.3rem;
-        font-size: 0.95rem;
+    .heart-animation {
+        font-size: 2rem;
     }
     
-    .photo-btn {
-        bottom: 30px;
-        right: 20px;
-        padding: 0.7rem 1.3rem;
-        font-size: 0.95rem;
+    .hero-instruction {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
     
-    .story-secret {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .memory-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-    }
-    
-    /* Tela de Password - Responsivo */
+    /* Password Screen Mobile */
     .password-content {
         padding: 2rem 1.5rem;
         width: 95%;
+        max-width: 95%;
     }
     
     .password-title {
@@ -1606,18 +1629,409 @@ body.dark-mode .hero-overlay {
     
     .password-subtitle {
         font-size: 0.9rem;
+        margin-bottom: 1.5rem;
     }
     
     .password-icon {
         font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .password-input-container {
+        flex-direction: column;
+        gap: 0.75rem;
     }
     
     .password-input {
-        padding: 0.85rem 1rem;
+        padding: 0.9rem 1rem;
         font-size: 1rem;
+        width: 100%;
     }
     
     .password-btn {
-        padding: 0.85rem 1.2rem;
+        padding: 0.9rem 1.2rem;
+        width: 100%;
+    }
+    
+    .password-hearts {
+        margin-top: 1.5rem;
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    /* Intro Screen Mobile */
+    .intro-title {
+        font-size: 2.5rem;
+    }
+    
+    .intro-hearts {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+    
+    .intro-message {
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+    }
+    
+    .intro-progress {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .intro-photo {
+        width: 150px;
+        height: 150px;
+        max-width: calc(100vw - 60px);
+    }
+    
+    /* Proposal Screen Mobile */
+    .proposal-content {
+        padding: 2rem 1.5rem;
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    .proposal-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .proposal-message {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+    
+    .proposal-message p {
+        margin-bottom: 1rem;
+    }
+    
+    .proposal-question {
+        font-size: 1.4rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .proposal-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .btn-sim,
+    .btn-nao {
+        padding: 0.9rem 2rem;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .proposal-hearts-bg i {
+        font-size: 2rem;
+    }
+    
+    /* Seções Mobile */
+    .story-section,
+    .gallery-section,
+    .games-section {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    /* História Mobile */
+    .story-card {
+        max-width: 100%;
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .story-content {
+        min-height: 400px;
+        padding: 0 1rem;
+    }
+    
+    .story-icon {
+        font-size: 2.5rem;
+    }
+    
+    .story-text {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+    
+    /* Segredos na História Mobile */
+    .secret-music {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .secret-photo {
+        bottom: 20px;
+        right: 10px;
+    }
+    
+    .music-btn {
+        top: 10px;
+        left: 10px;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .photo-btn {
+        bottom: 20px;
+        right: 10px;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .story-secret {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .secret-reveal-btn {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Galeria Mobile */
+    .gallery-instructions {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+    
+    .placeholder-content p {
+        font-size: 0.85rem;
+    }
+    
+    /* Jogos Mobile */
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .love-bonus-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .game-card {
+        padding: 1.5rem;
+    }
+    
+    .game-card .game-icon {
+        font-size: 3rem;
+    }
+    
+    .game-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .game-card p {
+        font-size: 0.95rem;
+    }
+    
+    .game-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Modal Mobile */
+    .modal-content {
+        margin: 10% auto;
+        padding: 1.5rem;
+        width: 90%;
+        max-width: 90%;
+    }
+    
+    .close {
+        font-size: 1.5rem;
+        right: 0.75rem;
+        top: 0.75rem;
+    }
+    
+    /* Love Bonus Modal Mobile */
+    .love-bonus-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Music Modal Mobile */
+    .music-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .music-message {
+        font-size: 1rem;
+    }
+    
+    /* Photo Modal Mobile */
+    .photo-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .photo-caption {
+        font-size: 1rem;
+    }
+    
+    /* Quiz Mobile */
+    .quiz-question h3 {
+        font-size: 1.1rem;
+    }
+    
+    .quiz-option {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Jogo da Memória Mobile */
+    .memory-stats {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .memory-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+    
+    .memory-card {
+        font-size: 1.5rem;
+    }
+    
+    /* Dados do Amor Mobile */
+    .dice {
+        font-size: 4rem;
+        margin: 1.5rem 0;
+    }
+    
+    #diceChallenge {
+        font-size: 1rem;
+        min-height: 50px;
+        margin: 1.5rem 0;
+        padding: 0.8rem;
+    }
+    
+    /* Modal de Imagem Mobile */
+    .modal-image {
+        max-width: 95%;
+        margin: 10% auto;
+    }
+    
+    /* Rodapé Mobile */
+    .footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsivo Extra Small (smartphones pequenos) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.6rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .password-title {
+        font-size: 1.5rem;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .proposal-title {
+        font-size: 2rem;
+    }
+    
+    .proposal-message {
+        font-size: 1rem;
+    }
+    
+    .proposal-question {
+        font-size: 1.2rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .btn-sim,
+    .btn-nao {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .intro-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .password-content {
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+    
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .proposal-content {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+    
+    .proposal-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .proposal-message {
+        margin-bottom: 1.5rem;
     }
 }
