@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernardo & Bruna ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Intro Romântica -->
+    <div id="introScreen" class="intro-screen">
+        <div class="intro-content">
+            <div class="intro-photos" id="introPhotos"></div>
+            <h1 class="intro-title">Bernardo & Bruna</h1>
+            <div class="intro-hearts">
+                <i class="fas fa-heart intro-heart"></i>
+                <i class="fas fa-heart intro-heart"></i>
+                <i class="fas fa-heart intro-heart"></i>
+            </div>
+            <p class="intro-message">Carregando memórias...</p>
+            <div class="intro-progress">
+                <div class="intro-progress-bar" id="introProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pedido de Namoro -->
+    <div id="proposalScreen" class="proposal-screen hidden">
+        <div class="proposal-hearts-bg">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <div class="proposal-content">
+            <h1 class="proposal-title">Bruna,</h1>
+            <div class="proposal-message">
+                <p>Desde o primeiro momento em que te vi, soube que eras especial.</p>
+                <p>Cada dia ao teu lado é uma nova aventura, cada sorriso teu ilumina o meu mundo.</p>
+                <p>Quero ser a razão do teu sorriso, o ombro onde te apoias, a mão que seguras.</p>
+                <p class="proposal-question">Queres namorar comigo?</p>
+            </div>
+            <div class="proposal-buttons">
+                <button id="btnSim" class="btn-sim" onclick="acceptProposal()"><i class="fas fa-heart"></i> Sim!</button>
+                <button id="btnNao" class="btn-nao" onclick="rejectProposal()"><i class="fas fa-heart-broken"></i> Não</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Principal -->
+    <div id="mainSite" class="main-site hidden">
+    <!-- Corações flutuantes de fundo -->
+    <div class="hearts-background">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><span id="relationshipTimer" class="relationship-timer"></span> B & B <i class="fas fa-heart"></i></h1>
+            <ul class="nav-menu">
+                <li><button id="darkModeToggle" class="dark-mode-toggle" title="Trocar modo"><i class="fas fa-moon"></i></button></li>
+                <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#story" class="nav-link"><i class="fas fa-book-heart"></i> A Nossa História</a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galeria</a></li>
+                <li><a href="#games" class="nav-link"><i class="fas fa-gamepad"></i> Jogos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Inicial -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="main-title">Bernardo & Bruna</h1>
+            <p class="subtitle"><i class="fas fa-heart"></i> A Nossa História de Amor <i class="fas fa-heart"></i></p>
+            <div class="heart-animation"><i class="fas fa-heart"></i></div>
+        </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2 class="section-title">A Nossa História</h2>
+            <div class="story-content">
+                <!-- Segredo 1: Música -->
+                <div class="story-secret secret-music" id="secretMusic" onclick="revealMusic()">
+                    <div class="secret-hearts"></div>
+                </div>
+                <button class="secret-reveal-btn music-btn hidden" id="musicBtn" onclick="playSecretMusic()">
+                    <i class="fas fa-music"></i> A tua Canção
+                </button>
+                
+                <!-- Segredo 2: Foto -->
+                <div class="story-secret secret-photo" id="secretPhoto" onclick="revealPhoto()">
+                    <div class="secret-hearts"></div>
+                </div>
+                <button class="secret-reveal-btn photo-btn hidden" id="photoBtn" onclick="showSecretPhoto()">
+                    <i class="fas fa-image"></i> A minha Yellow Person
+                </button>
+                <div class="story-card">
+                    <div class="story-icon"><i class="fas fa-star"></i></div>
+                    <h3>Como Nos Conhecemos</h3>
+                    <p class="story-text" id="story-0">
+                        Foi um simples aniversário que nos juntou pela primeira vez...Sabia eu que era naquele simples aniversário que algo maior estava por vir.
+                        Quando conversamos pela primeira vez, senti algo, senti que primeiro tinha feito uma amiga, alguém com quem  conversar, pois partilhavamos os mesmos gostos.
+
+                        A nossa conversa fluia tão bem, que parecia que nos conhecíamos há anos. Enviava te videos e tu ignoravas, porque achavas aleatorio e nao conhecias me de lado nenhum,
+                        porém lá chegou o dia que respondeste e depois começamos a partilhar um com o outro. 
+                        
+                        As saídas de grupo com os outros vinham e tu começaste a desenvolver sentimentos, e eu também, apesar que estava cego por outra rapariga, visto que nao tinha qualquer hipotese contigo, mas depois de um tempo de um namoro nao assumido, realmente pude ver que aquela era a pessoa com quem afinal queria estar, e então depois de um tempo a falar, decidimos dar o passo e assumir o namoro, e foi a melhor decisão que tomei, porque desde então tem sido tudo maravilhoso, cada dia ao teu lado é uma nova aventura, cada sorriso teu ilumina o meu mundo.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Nossa Galeria de Momentos</h2>
+            <div class="gallery-grid" id="photoGallery">
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <span class="placeholder-icon"><i class="fas fa-camera"></i></span>
+                        <p>Foto 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <span class="placeholder-icon"><i class="fas fa-camera"></i></span>
+                        <p>Foto 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <span class="placeholder-icon"><i class="fas fa-camera"></i></span>
+                        <p>Foto 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item placeholder">
+                    <div class="placeholder-content">
+                        <span class="placeholder-icon"><i class="fas fa-camera"></i></span>
+                        <p>Foto 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jogos Interativos -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Jogos para Casais</h2>
+                <div class="secret-trigger" id="secretTrigger" onclick="revealSecret()">
+                    <div class="secret-hearts"></div>
+                </div>
+                <button class="love-bonus-btn hidden" id="loveBonusBtn" onclick="openLoveBonus()">
+                    <i class="fas fa-gift"></i> Love Bonus
+                </button>
+            </div>
+            <div class="games-grid">
+                <!-- Quiz do Casal -->
+                <div class="game-card">
+                    <div class="game-icon"><i class="fas fa-question-circle"></i></div>
+                    <h3>Quiz do Casal</h3>
+                    <p>Testem o quanto conhecem um ao outro!</p>
+                    <button class="game-btn" onclick="startQuiz()"><i class="fas fa-play"></i> Jogar</button>
+                </div>
+                
+                <!-- Jogo da Memória -->
+                <div class="game-card">
+                    <div class="game-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Jogo da Memória</h3>
+                    <p>Encontrem os pares de corações!</p>
+                    <button class="game-btn" onclick="startMemory()"><i class="fas fa-play"></i> Jogar</button>
+                </div>
+                
+                <!-- Dados do Amor -->
+                <div class="game-card">
+                    <div class="game-icon"><i class="fas fa-dice"></i></div>
+                    <h3>Dados do Amor</h3>
+                    <p>Desafios românticos aleatórios!</p>
+                    <button class="game-btn" onclick="startDice()"><i class="fas fa-play"></i> Jogar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Quiz -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuiz()">&times;</span>
+            <h2>Quiz do Casal 💘</h2>
+            <div id="quizContent"></div>
+            <div id="quizResult"></div>
+        </div>
+    </div>
+
+    <!-- Modal do Jogo da Memória -->
+    <div id="memoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMemory()">&times;</span>
+            <h2>Jogo da Memória 🎴</h2>
+            <div class="memory-stats">
+                <p>Jogadas: <span id="moves">0</span></p>
+                <p>Pares: <span id="pairs">0</span>/8</p>
+            </div>
+            <div id="memoryGame" class="memory-grid"></div>
+            <button class="game-btn" onclick="resetMemory()">Reiniciar</button>
+        </div>
+    </div>
+
+    <!-- Modal dos Dados do Amor -->
+    <div id="diceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDice()">&times;</span>
+            <h2>Dados do Amor 🎲</h2>
+            <div class="dice-container">
+                <div class="dice" id="dice">🎲</div>
+                <p id="diceChallenge"></p>
+                <button class="game-btn" onclick="rollDice()">Lançar Dados</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de imagem ampliada -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImageModal()">&times;</span>
+        <img class="modal-image" id="modalImage" src="" alt="">
+    </div>
+
+    <!-- Modal Love Bonus -->
+    <div id="loveBonusModal" class="modal">
+        <div class="modal-content love-bonus-content">
+            <span class="close" onclick="closeLoveBonus()">&times;</span>
+            <h2 class="love-bonus-title"><i class="fas fa-heart"></i> Love Bonus <i class="fas fa-heart"></i></h2>
+            <div class="video-container">
+                <video id="loveBonusVideo" controls>
+                    <source src="images/love-bonus.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Música Secreta -->
+    <div id="musicModal" class="modal">
+        <div class="modal-content music-modal-content">
+            <span class="close" onclick="closeMusicModal()">&times;</span>
+            <h2 class="music-title"><i class="fas fa-heart-music"></i> Nossa Canção <i class="fas fa-heart-music"></i></h2>
+            <div class="music-player">
+                <audio id="secretAudio" controls loop>
+                    <source src="images/nossa-musica.mp3" type="audio/mpeg">
+                    <source src="images/nossa-musica.ogg" type="audio/ogg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+            <p class="music-message">♫ A tua canção a qual eu te dedico minha princesa ♫</p>
+        </div>
+    </div>
+
+    <!-- Modal Foto Secreta -->
+    <div id="secretPhotoModal" class="modal">
+        <div class="modal-content photo-modal-content">
+            <span class="close" onclick="closeSecretPhotoModal()">&times;</span>
+            <h2 class="photo-title"><i class="fas fa-heart"></i> A minha Yellow Person <i class="fas fa-heart"></i></h2>
+            <div class="secret-photo-container">
+                <video id="secretVideo" controls>
+                    <source src="images/foto-secreta.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <p class="photo-caption">Tal como o Yellow do Sol tu tambem iluminas o meu mundo 🌞</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p><i class="fas fa-heart"></i> Bernardo & Bruna</p>
+        <p><i class="fas fa-calendar-heart"></i> São Valentim 2026</p>
+    </footer>
+    </div>
+    <!-- Fim do Site Principal -->
+
+    <script src="script.js"></script>
+</body>
+</html>
