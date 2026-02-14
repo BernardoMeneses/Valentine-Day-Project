@@ -1,3 +1,56 @@
+// ===== TELA DE PASSWORD =====
+const correctPassword = "cabrito"; // ALTERE AQUI A SUA SENHA
+
+window.checkPassword = function() {
+    const input = document.getElementById('passwordInput');
+    const error = document.getElementById('passwordError');
+    const passwordScreen = document.getElementById('passwordScreen');
+    const introScreen = document.getElementById('introScreen');
+    
+    if (input.value === correctPassword) {
+        // Senha correta - animação de saída
+        passwordScreen.style.animation = 'fadeOutPassword 0.8s ease-out';
+        setTimeout(() => {
+            passwordScreen.style.display = 'none';
+            introScreen.style.display = 'flex';
+            startIntro();
+        }, 800);
+    } else {
+        // Senha incorreta - mostrar erro
+        error.classList.remove('hidden');
+        input.classList.add('shake-error');
+        input.value = '';
+        
+        setTimeout(() => {
+            error.classList.add('hidden');
+            input.classList.remove('shake-error');
+        }, 2000);
+    }
+}
+
+// Permitir Enter para enviar senha
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('passwordInput');
+    if (passwordInput) {
+        passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        passwordInput.focus();
+    }
+});
+
+function startIntro() {
+    loadIntroPhotos();
+    
+    // Barra de progresso
+    const progressBar = document.getElementById('introProgress');
+    progressBar.style.width = '100%';
+    
+    finishIntro();
+}
+
 // ===== TEMPORIZADOR DE RELACIONAMENTO =====
 const relationshipStartDate = new Date('2025-07-07T22:30:00');
 
@@ -199,11 +252,7 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-// Iniciar intro ao carregar
-window.addEventListener('load', () => {
-    loadIntroPhotos();
-    finishIntro();
-});
+// Intro agora é iniciado após password correta (ver função checkPassword)
 
 // ===== DARK MODE =====
 const darkModeToggle = document.getElementById('darkModeToggle');
